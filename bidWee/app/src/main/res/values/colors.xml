@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="bg_color">#0b1718</color>
+    <color name="white_color">#ffffff</color>
+
+    <!--login-->
+    <color name="seperator_color">#777777</color>
+    <color name="login_selectedtext_color">#90b239</color>
+    <color name="login_registerbtn_bg_color">#1b3071</color>
+    <color name="login_loginbtn_bg">#9fc43c</color>
 </resources>
