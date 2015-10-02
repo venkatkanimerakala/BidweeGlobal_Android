@@ -24,7 +24,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="30dp"
-                    android:focusable="true"
                     android:src="@drawable/logo" />
 
                 <LinearLayout
@@ -93,6 +92,7 @@
                     android:layout_marginRight="40dp"
                     android:gravity="center"
                     android:hint="PASSWORD"
+                    android:inputType="textPassword"
                     android:textSize="18sp"
                     android:singleLine="true"
                     android:textColor="@color/white_color"
