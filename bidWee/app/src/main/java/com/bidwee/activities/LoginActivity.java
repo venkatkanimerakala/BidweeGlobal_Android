@@ -1,11 +1,14 @@
 package com.bidwee.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.bidwee.bidwee.RegisterActivity;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -55,6 +58,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.login_asMerchantTextview :
                 loginAsCustomerTextView.setTextColor(getResources().getColor(R.color.white_color));
                 loginAsMerchantTextView.setTextColor(getResources().getColor(R.color.login_selectedtext_color));
+                break;
+
+            case R.id.login_registerButton:
+                Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(registerIntent);
                 break;
 
             default:

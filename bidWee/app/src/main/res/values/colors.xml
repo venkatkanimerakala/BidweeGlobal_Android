@@ -2,6 +2,8 @@
 <resources>
     <color name="bg_color">#0b1718</color>
     <color name="white_color">#ffffff</color>
+    <color name="grey_color">#777777</color>
+    <color name="edittext_underline_color">#747a7c</color>
 
     <!--login-->
     <color name="seperator_color">#777777</color>

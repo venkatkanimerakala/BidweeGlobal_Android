@@ -24,6 +24,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="30dp"
+                    android:focusable="true"
                     android:src="@drawable/logo" />
 
                 <LinearLayout
@@ -65,26 +66,46 @@
                     android:id="@+id/login_userNameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
                     android:layout_marginTop="30dp"
+                    android:background="@null"
                     android:gravity="center"
                     android:hint="USER ID"
+                    android:singleLine="true"
+                    android:textSize="18sp"
                     android:textColor="@color/white_color"
-                    android:textColorHint="@color/white_color" />
+                    android:textColorHint="@color/grey_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@color/seperator_color" />
 
                 <EditText
                     android:id="@+id/login_passwordEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
                     android:gravity="center"
                     android:hint="PASSWORD"
+                    android:textSize="18sp"
+                    android:singleLine="true"
                     android:textColor="@color/white_color"
-                    android:textColorHint="@color/white_color" />
+                    android:textColorHint="@color/grey_color"
+                    android:background="@null"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@color/seperator_color" />
 
                 <TextView
                     android:id="@+id/login_forgotParrwordTextview"
