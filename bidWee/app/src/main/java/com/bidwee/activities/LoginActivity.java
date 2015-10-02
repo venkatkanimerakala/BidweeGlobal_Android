@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.bidwee.bidwee.RegisterActivity;
-
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView loginAsCustomerTextView, loginAsMerchantTextView,
@@ -67,6 +65,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(registerIntent);
                 break;
 
+            case R.id.login_loginButton:
+                /*if(TextUtils.isEmpty(usernameEditText.getText().toString()) ||
+                        TextUtils.isEmpty(passwordEditText.getText().toString())){
+                    Toast.makeText(LoginActivity.this,"Please enter username and password",Toast.LENGTH_SHORT).show();
+                    return;
+                }*/
+
+                Intent loginIntant = new Intent(LoginActivity.this, DashboardActivity.class);
+                startActivity(loginIntant);
+                finish();
+                break;
             default:
                 break;
         }

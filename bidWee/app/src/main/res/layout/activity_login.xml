@@ -72,9 +72,9 @@
                     android:gravity="center"
                     android:hint="USER ID"
                     android:singleLine="true"
-                    android:textSize="18sp"
                     android:textColor="@color/white_color"
-                    android:textColorHint="@color/grey_color" />
+                    android:textColorHint="@color/grey_color"
+                    android:textSize="18sp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -90,14 +90,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
+                    android:background="@null"
                     android:gravity="center"
                     android:hint="PASSWORD"
                     android:inputType="textPassword"
-                    android:textSize="18sp"
                     android:singleLine="true"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/grey_color"
-                    android:background="@null"/>
+                    android:textSize="18sp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -133,7 +133,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/login_registerbtn_bg_color"
+                android:background="@drawable/left_btn_bg"
                 android:text="REGISTER"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
@@ -143,7 +143,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/login_loginbtn_bg"
+                android:background="@drawable/right_btn_bg"
                 android:text="LOGIN"
                 android:textSize="16sp" />
 

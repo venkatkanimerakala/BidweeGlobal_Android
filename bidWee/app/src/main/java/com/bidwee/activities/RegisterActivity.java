@@ -1,5 +1,6 @@
-package com.bidwee.bidwee;
+package com.bidwee.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
@@ -8,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.bidwee.activities.R;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -88,6 +87,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             case R.id.reg_femaleTextView:
                 maleTextView.setTextColor(getResources().getColor(R.color.white_color));
                 femaleTextview.setTextColor(getResources().getColor(R.color.login_selectedtext_color));
+                break;
+
+            case R.id.reg_registerAsMerchantButton:
+
+            case R.id.reg_registerButton:
+                Intent userAuthIntent = new Intent(RegisterActivity.this, UserAuthenticationActivity.class);
+                startActivity(userAuthIntent);
                 break;
 
             default:
