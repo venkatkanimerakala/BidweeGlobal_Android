@@ -94,7 +94,7 @@ public class UserAuthenticationActivity extends AppCompatActivity implements Vie
                         }
 
                         if (timerCount == 22){
-                            Intent dashboardIntent = new Intent(UserAuthenticationActivity.this, DashboardActivity.class);
+                            Intent dashboardIntent = new Intent(UserAuthenticationActivity.this, MerchantDashboardActivity.class);
                             dashboardIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(dashboardIntent);
                             finish();
@@ -151,7 +151,7 @@ public class UserAuthenticationActivity extends AppCompatActivity implements Vie
                     return;
                 }
 
-                Intent dashboardIntent = new Intent(UserAuthenticationActivity.this, DashboardActivity.class);
+                Intent dashboardIntent = new Intent(UserAuthenticationActivity.this, MerchantDashboardActivity.class);
                 dashboardIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(dashboardIntent);
                 finish();

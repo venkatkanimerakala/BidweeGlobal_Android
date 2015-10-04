@@ -23,13 +23,23 @@
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
         <activity
-            android:name=".DashboardActivity"
-            android:theme="@style/MaterialDesignTheme"
-            android:windowSoftInputMode="stateHidden|adjustResize">
+            android:name=".UserAuthenticationActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
         <activity
-            android:name=".UserAuthenticationActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize">
+            android:name=".CustomerDashboradActivity"
+            android:theme="@style/MaterialDesignTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name=".MerchantDashboardActivity"
+            android:theme="@style/MaterialDesignTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name=".ProductDetailsActivity"
+            android:theme="@style/MaterialDesignTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
     </application>
 

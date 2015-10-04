@@ -13,6 +13,7 @@
 
     <color name="bg_color">#0b1718</color>
     <color name="white_color">#ffffff</color>
+    <color name="black_color">#000000</color>
     <color name="grey_color">#777777</color>
     <color name="edittext_underline_color">#747a7c</color>
 
@@ -23,4 +24,8 @@
     <color name="login_registerbtn_pressed_bg_color">#771b3071</color>
     <color name="login_loginbtn_bg">#9fc43c</color>
     <color name="login_loginbtn_pressed_bg">#779fc43c</color>
+
+
+    <color name="dashboard_loc_bg_color">#273132</color>
+    <color name="dashboard_loc_change_bg_color">#1e282a</color>
 </resources>

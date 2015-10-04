@@ -72,7 +72,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     return;
                 }*/
 
-                Intent loginIntant = new Intent(LoginActivity.this, DashboardActivity.class);
+                Intent loginIntant = new Intent(LoginActivity.this, CustomerDashboradActivity.class);
                 startActivity(loginIntant);
                 finish();
                 break;

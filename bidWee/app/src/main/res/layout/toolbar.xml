@@ -5,29 +5,106 @@
     android:background="@color/primary">
 
     <ImageView
-        android:id="@+id/tool_profile"
+        android:id="@+id/tool_profileImageView"
         android:layout_width="35dp"
         android:layout_height="45dp"
+        android:layout_centerVertical="true"
         android:paddingLeft="3dp"
         android:paddingRight="3dp"
-        android:src="@drawable/icon_profile"
-        android:layout_centerVertical="true" />
+        android:src="@drawable/icon_profile" />
 
     <View
-        android:id="@+id/tool_seperatorProfile"
+        android:id="@+id/tool_seperatorProfileView"
         android:layout_width="0.5dp"
         android:layout_height="45dp"
-        android:layout_toRightOf="@id/tool_profile"
+        android:layout_toRightOf="@id/tool_profileImageView"
         android:background="@color/grey_color"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" />
 
     <ImageView
+        android:id="@+id/tool_creditsImageView"
         android:layout_width="35dp"
         android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tool_seperatorProfileView"
         android:paddingLeft="3dp"
         android:paddingRight="3dp"
-        android:src="@drawable/icon_credits"
-        android:layout_toRightOf="@id/tool_seperatorProfile"
-        android:layout_centerVertical="true" />
+        android:src="@drawable/icon_credits" />
+
+    <View
+        android:id="@+id/tool_seperatorCreditView"
+        android:layout_width="0.5dp"
+        android:layout_height="45dp"
+        android:layout_toRightOf="@id/tool_creditsImageView"
+        android:background="@color/grey_color"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" />
+
+
+    <ImageView
+        android:id="@+id/tool_notificationImageView"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:src="@drawable/icon_notifications" />
+
+    <View
+        android:id="@+id/tool_seperatorNotificationView"
+        android:layout_width="0.5dp"
+        android:layout_height="45dp"
+        android:layout_toLeftOf="@id/tool_notificationImageView"
+        android:background="@color/grey_color"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" />
+
+    <ImageView
+        android:id="@+id/tool_rfbImageView"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/tool_seperatorNotificationView"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:src="@drawable/icon_rfb" />
+
+    <View
+        android:id="@+id/tool_seperatorRfbView"
+        android:layout_width="0.5dp"
+        android:layout_height="45dp"
+        android:layout_toLeftOf="@id/tool_rfbImageView"
+        android:background="@color/grey_color"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/tool_seperatorRfbView"
+        android:layout_toRightOf="@id/tool_seperatorCreditView"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="bid"
+            android:textColor="@color/login_selectedtext_color"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Wee"
+            android:textColor="@color/white_color"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+
 </RelativeLayout>
