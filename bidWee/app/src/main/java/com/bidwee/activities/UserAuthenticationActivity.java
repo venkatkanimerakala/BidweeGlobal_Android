@@ -90,10 +90,7 @@ public class UserAuthenticationActivity extends AppCompatActivity implements Vie
                     @Override
                     public void run() {
                         if (timerCount == 24){
-                            digit1Edittext.setText("2");
-                            digit2Edittext.setText("4");
-                            digit3Edittext.setText("7");
-                            digit4Edittext.setText("1");
+                            set4DigitCode();
                         }
 
                         if (timerCount == 22){
@@ -114,7 +111,7 @@ public class UserAuthenticationActivity extends AppCompatActivity implements Vie
             }
         };
 
-        timer.schedule(timerTask,1000, 1000);
+        timer.schedule(timerTask, 1000, 1000);
 
     }
 
@@ -127,6 +124,18 @@ public class UserAuthenticationActivity extends AppCompatActivity implements Vie
             prefix = "(00:";
         }
         timerTextView.setText(prefix + String.valueOf(timerCount) + ")");
+    }
+
+    private void set4DigitCode(){
+        digit1Edittext.setText("2");
+        digit2Edittext.setText("4");
+        digit3Edittext.setText("7");
+        digit4Edittext.setText("1");
+
+        digit1Edittext.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_2stepverify_digit_active));
+        digit2Edittext.setBackgroundDrawable( getResources().getDrawable(R.drawable.bg_2stepverify_digit_active) );
+        digit3Edittext.setBackgroundDrawable( getResources().getDrawable(R.drawable.bg_2stepverify_digit_active) );
+        digit4Edittext.setBackgroundDrawable( getResources().getDrawable(R.drawable.bg_2stepverify_digit_active) );
     }
 
     @Override

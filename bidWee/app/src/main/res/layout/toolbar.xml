@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/primary">
+
+    <ImageView
+        android:id="@+id/tool_profile"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:src="@drawable/icon_profile"
+        android:layout_centerVertical="true" />
+
+    <View
+        android:id="@+id/tool_seperatorProfile"
+        android:layout_width="0.5dp"
+        android:layout_height="45dp"
+        android:layout_toRightOf="@id/tool_profile"
+        android:background="@color/grey_color"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:src="@drawable/icon_credits"
+        android:layout_toRightOf="@id/tool_seperatorProfile"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

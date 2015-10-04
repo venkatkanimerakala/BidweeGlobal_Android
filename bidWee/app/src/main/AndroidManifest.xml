@@ -24,6 +24,7 @@
         </activity>
         <activity
             android:name=".DashboardActivity"
+            android:theme="@style/MaterialDesignTheme"
             android:windowSoftInputMode="stateHidden|adjustResize">
         </activity>
         <activity
