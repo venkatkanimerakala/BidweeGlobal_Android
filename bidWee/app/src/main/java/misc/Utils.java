@@ -5,7 +5,7 @@ package misc;
  */
 public class Utils {
 
-    public static String[] productSuggestionsArray = {"Sony vaio", "Sony Bravio LED&quote;", "Sony DSLR"};
+    public static String[] productSuggestionsArray = {"Sony vaio", "Sony BRAVIA KDL-W600 (42) LED TV", "Sony DSLR"};
 
     public static String[] categoryArray = {"Accessories","Clothings", "Electronics", "Footwear"};
 

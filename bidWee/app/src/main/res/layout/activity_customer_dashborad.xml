@@ -74,7 +74,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="10dp"
@@ -110,7 +109,7 @@
             android:gravity="center"
             android:text="OR"
             android:textColor="@color/login_selectedtext_color"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -133,9 +132,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border_bg"
-                android:padding="10dp"
                 android:text="ELECTRONICS"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
 
             <Spinner
                 android:id="@+id/dash_cust_SelectSubCategorySpinner"
@@ -143,8 +141,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/border_bg"
-                android:padding="10dp"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:visibility="gone" />
 
             <Spinner
                 android:id="@+id/dash_cust_brandSpinner"
@@ -152,8 +150,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/border_bg"
-                android:padding="10dp"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:visibility="gone" />
 
             <Spinner
                 android:id="@+id/dash_cust_productSpinner"
@@ -161,8 +159,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/border_bg"
-                android:padding="10dp"
-                android:textSize="14sp" />
+                android:textSize="12sp"
+                android:visibility="gone" />
 
         </LinearLayout>
 
@@ -173,10 +171,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/left_btn_bg"
-            android:text="SEARCH"
-            android:textSize="14sp"
             android:gravity="center"
-            android:textColor="@color/white_color"/>
+            android:text="SEARCH"
+            android:textColor="@color/white_color"
+            android:textSize="14sp" />
 
     </LinearLayout>
 

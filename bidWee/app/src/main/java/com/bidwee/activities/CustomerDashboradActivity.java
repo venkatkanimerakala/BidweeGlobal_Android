@@ -30,6 +30,8 @@ public class CustomerDashboradActivity extends AppCompatActivity implements View
     private ArrayAdapter<String> searchAutoComAdapter, categoryAdapter,
             subcategoryAdapter, brandAdapter, productAdapter;
 
+    private boolean isCategorySelected = false, isSubCategorySelected = false, isBrandSelected = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,65 +44,92 @@ public class CustomerDashboradActivity extends AppCompatActivity implements View
 
     private void initControls() {
 
-        changeLocationLL = (LinearLayout)findViewById(R.id.dash_cust_changeLocLL);
-        addressTextView = (TextView)findViewById(R.id.dash_cust_productshippingaddTextview);
-        searchProductAutoComplete = (AutoCompleteTextView)findViewById(R.id.dash_cust_prodctSearchAutoCom);
+        changeLocationLL = (LinearLayout) findViewById(R.id.dash_cust_changeLocLL);
+        addressTextView = (TextView) findViewById(R.id.dash_cust_productshippingaddTextview);
+        searchProductAutoComplete = (AutoCompleteTextView) findViewById(R.id.dash_cust_prodctSearchAutoCom);
 
-        categorySpinner = (Spinner)findViewById(R.id.dash_cust_selectCategorySpinner);
-        subCategorySpinner = (Spinner)findViewById(R.id.dash_cust_SelectSubCategorySpinner);
-        brandSpinner = (Spinner)findViewById(R.id.dash_cust_brandSpinner);
-        productSpinner = (Spinner)findViewById(R.id.dash_cust_productSpinner);
+        categorySpinner = (Spinner) findViewById(R.id.dash_cust_selectCategorySpinner);
+        subCategorySpinner = (Spinner) findViewById(R.id.dash_cust_SelectSubCategorySpinner);
+        brandSpinner = (Spinner) findViewById(R.id.dash_cust_brandSpinner);
+        productSpinner = (Spinner) findViewById(R.id.dash_cust_productSpinner);
 
-        searchButton = (Button)findViewById(R.id.dash_cust_searchButton);
+        searchButton = (Button) findViewById(R.id.dash_cust_searchButton);
 
         changeLocationLL.setOnClickListener(this);
 
         searchButton.setOnClickListener(this);
 
-        searchAutoComAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, Utils.productSuggestionsArray);
+        searchAutoComAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Utils.productSuggestionsArray);
         searchProductAutoComplete.setAdapter(searchAutoComAdapter);
 
-        categoryAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, Utils.categoryArray);
+        categoryAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Utils.categoryArray);
         categorySpinner.setAdapter(categoryAdapter);
 
-        subcategoryAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, Utils.subCategoryArray);
+        subcategoryAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Utils.subCategoryArray);
         subCategorySpinner.setAdapter(subcategoryAdapter);
 
-        brandAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, Utils.brandArray);
+        brandAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Utils.brandArray);
         brandSpinner.setAdapter(brandAdapter);
 
-        productAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, Utils.productArray);
+        productAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Utils.productArray);
         productSpinner.setAdapter(productAdapter);
 
         subCategorySpinner.setVisibility(View.GONE);
         brandSpinner.setVisibility(View.GONE);
         productSpinner.setVisibility(View.GONE);
 
-        categorySpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                subCategorySpinner.setVisibility(View.VISIBLE);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (isCategorySelected) {
+                    subCategorySpinner.setVisibility(View.VISIBLE);
+                } else {
+                    isCategorySelected = true;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 
-        subCategorySpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        subCategorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                brandSpinner.setVisibility(View.VISIBLE);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (isSubCategorySelected) {
+                    brandSpinner.setVisibility(View.VISIBLE);
+                } else {
+                    isSubCategorySelected = true;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 
-        brandSpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        brandSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                productSpinner.setVisibility(View.VISIBLE);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (isBrandSelected) {
+                    productSpinner.setVisibility(View.VISIBLE);
+                } else {
+                    isBrandSelected = true;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 
-        profileImageView = (ImageView)findViewById(R.id.tool_profileImageView);
-        creditsImageView = (ImageView)findViewById(R.id.tool_creditsImageView);
-        rfbImageView = (ImageView)findViewById(R.id.tool_rfbImageView);
-        notificationImageView = (ImageView)findViewById(R.id.tool_notificationImageView);
+        profileImageView = (ImageView) findViewById(R.id.tool_profileImageView);
+        creditsImageView = (ImageView) findViewById(R.id.tool_creditsImageView);
+        rfbImageView = (ImageView) findViewById(R.id.tool_rfbImageView);
+        notificationImageView = (ImageView) findViewById(R.id.tool_notificationImageView);
 
         profileImageView.setOnClickListener(this);
         creditsImageView.setOnClickListener(this);
@@ -112,7 +141,7 @@ public class CustomerDashboradActivity extends AppCompatActivity implements View
     @Override
     public void onClick(View view) {
 
-        switch (view.getId()){
+        switch (view.getId()) {
 
             case R.id.dash_cust_searchButton:
                 Intent productDetailsIntent = new Intent(CustomerDashboradActivity.this, ProductDetailsActivity.class);
@@ -120,23 +149,23 @@ public class CustomerDashboradActivity extends AppCompatActivity implements View
                 break;
 
             case R.id.dash_cust_changeLocLL:
-                Toast.makeText(CustomerDashboradActivity.this,"Fetching location", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CustomerDashboradActivity.this, "Fetching location", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.tool_profileImageView:
-                Toast.makeText(CustomerDashboradActivity.this,"Profile will be there some day", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CustomerDashboradActivity.this, "Profile will be there some day", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.tool_creditsImageView:
-                Toast.makeText(CustomerDashboradActivity.this,"Credits will be there some day", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CustomerDashboradActivity.this, "Credits will be there some day", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.tool_rfbImageView:
-                Toast.makeText(CustomerDashboradActivity.this,"RFB will be there some day", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CustomerDashboradActivity.this, "RFB will be there some day", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.tool_notificationImageView:
-                Toast.makeText(CustomerDashboradActivity.this,"Notifications will be there some day", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CustomerDashboradActivity.this, "Notifications will be there some day", Toast.LENGTH_SHORT).show();
                 break;
 
             default:
