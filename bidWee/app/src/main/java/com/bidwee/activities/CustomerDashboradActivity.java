@@ -165,7 +165,8 @@ public class CustomerDashboradActivity extends AppCompatActivity implements View
                 break;
 
             case R.id.tool_notificationImageView:
-                Toast.makeText(CustomerDashboradActivity.this, "Notifications will be there some day", Toast.LENGTH_SHORT).show();
+                Intent notificationIntent = new Intent(CustomerDashboradActivity.this, NotificationActivity.class);
+                startActivity(notificationIntent);
                 break;
 
             default:

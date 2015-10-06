@@ -5,7 +5,7 @@
     <color name="primary">#334e82</color>
     <color name="primary_dark">#2b4387</color>
     <color name="primary_light">#334e82</color>
-    <color name="accent">#FF4081</color>
+    <color name="accent">#777777</color>
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
@@ -28,4 +28,11 @@
 
     <color name="dashboard_loc_bg_color">#273132</color>
     <color name="dashboard_loc_change_bg_color">#1e282a</color>
+
+    <color name="product_title_color">#1c3071</color>
+    <color name="product_midsection_bg">#333d3e</color>
+    <color name="product_circle_bg_color">#121b24</color>
+    <color name="product_mrp_txt_bg_color">#6f706a</color>
+    <color name="product_bestprice_txt_bg_color">#9fc33b</color>
+
 </resources>

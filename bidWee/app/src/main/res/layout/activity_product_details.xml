@@ -1,11 +1,464 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SONY BRAVIA"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_texture"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <include layout="@layout/toolbar_product_details" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white_color"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:src="@drawable/sony_bravio" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="SONY BRAVIA LED 42&quot; KLD-W600"
+                                android:textColor="@color/product_title_color"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="3"
+                                    android:text="Brand"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text=":  Sony"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="3"
+                                    android:text="Size"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text=":  42&quot;"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="3"
+                                    android:text="Mfg"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text=":  2015"
+                                    android:textColor="@color/black_color"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="2dp"
+                            android:text="Experience stunning picture quality, whether you're watching movies on Blu-ray Disc, regular TV broadcasts, web videos or low-resolution smartphone clips"
+                            android:textColor="@color/black_color"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/product_mrp_txt_bg_color"
+                                android:gravity="center"
+                                android:text="MRP \nRs. 50,000"
+                                android:textColor="@color/white_color"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/product_bestprice_txt_bg_color"
+                                android:gravity="center"
+                                android:text="Best available price \n Rs. 48,999"
+                                android:textColor="@color/black_color"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/product_midsection_bg"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/product_midCircleLL"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/circle_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Your Credit \nBalance"
+                            android:textColor="@color/white_color"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="46"
+                            android:textColor="@color/login_selectedtext_color"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/product_midCircleLL"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <RadioButton
+                                android:id="@+id/prod_withinAreaRadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:checked="true"/>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="find within"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="10sp" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hyderabad "
+                                        android:textColor="@color/login_selectedtext_color"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="(5 Credits)"
+                                        android:textColor="@color/white_color"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="bidWee Merchants"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="5693"
+                                    android:textColor="@color/login_selectedtext_color"
+                                    android:textSize="16sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_weight="2"
+                                android:background="@color/white_color" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="center"
+                                android:text="OR"
+                                android:textColor="@color/login_selectedtext_color"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_weight="2"
+                                android:background="@color/white_color" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <RadioButton
+                                android:id="@+id/prod_kmRadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="5KM "
+                                        android:textColor="@color/login_selectedtext_color"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="(2 Credits)"
+                                        android:gravity="center"
+                                        android:textColor="@color/white_color"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="fManikonda, Hyderabad"
+                                    android:textColor="@color/white_color"
+                                    android:textSize="10sp" />
+
+
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:text="468"
+                                android:layout_weight="4"
+                                android:textColor="@color/login_selectedtext_color"
+                                android:textSize="16sp"
+                                android:gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white_color"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="YOR BUDGET"
+                        android:textColor="@color/product_title_color"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/border_bg"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs."
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/prod_budgetEdittext"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@null"
+                            android:inputType="number"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/dash_cust_requestForBidButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/left_btn_bg"
+                    android:gravity="center"
+                    android:text="REQUEST FOR BID"
+                    android:textColor="@color/white_color"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -68,8 +68,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
 
             case R.id.login_loginButton:
-                if(TextUtils.isEmpty(usernameEditText.getText().toString()) ||
-                        TextUtils.isEmpty(passwordEditText.getText().toString())){
+                if (TextUtils.isEmpty(usernameEditText.getText().toString()) ||
+                        TextUtils.isEmpty(passwordEditText.getText().toString())) {
                     Toast.makeText(LoginActivity.this, "Please enter username and password", Toast.LENGTH_SHORT).show();
                     return;
                 }
