@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/primary">
+
+    <ImageView
+        android:id="@+id/tool_backImageView"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:src="@drawable/icon_back" />
+
+    <ImageView
+        android:id="@+id/tool_notificationImageView"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:src="@drawable/icon_notifications" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/tool_notificationImageView"
+        android:layout_toRightOf="@id/tool_backImageView"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="bid"
+            android:textColor="@color/login_selectedtext_color"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Wee"
+            android:textColor="@color/white_color"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

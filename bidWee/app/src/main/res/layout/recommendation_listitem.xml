@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@color/white_color">
+
+    <ImageView
+        android:id="@+id/item_prodctImageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sony_bravio"
+        android:layout_weight="3"/>
+
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:text="Sony Bravia LED 42&quot;"
+        android:textColor="@color/black_color"
+        android:layout_weight="2"/>
+
+    <LinearLayout
+        android:id="@+id/item_priceLL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_mrpTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/product_mrp_txt_bg_color"
+            android:gravity="center"
+            android:text="MRP \nRs. 50,000"
+            android:textColor="@color/white_color"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/item_bestPriceTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/product_bestprice_txt_bg_color"
+            android:gravity="center"
+            android:text="Best available price \n Rs. 48,999"
+            android:textColor="@color/black_color"
+            android:textSize="8sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
