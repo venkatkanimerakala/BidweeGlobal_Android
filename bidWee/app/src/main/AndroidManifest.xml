@@ -27,7 +27,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
         <activity
-            android:name=".CustomerDashboradActivity"
+            android:name="customer.CustomerDashboradActivity"
             android:theme="@style/MaterialDesignTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
@@ -37,16 +37,24 @@
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
         <activity
-            android:name=".ProductDetailsActivity"
+            android:name="customer.ProductDetailsActivity"
             android:theme="@style/MaterialDesignTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" >
         </activity>
         <activity
-            android:name=".BidRequestActivity"
+            android:name="customer.BidRequestActivity"
             android:theme="@style/MaterialDesignTheme" >
         </activity>
         <activity
-            android:name=".NotificationActivity"
+            android:name="customer.MyProfileActivity"
+            android:theme="@style/MaterialDesignTheme" >
+        </activity>
+        <activity
+            android:name="customer.NotificationsActivity"
+            android:theme="@style/MaterialDesignTheme" >
+        </activity>
+        <activity
+            android:name="customer.RFBActivity"
             android:theme="@style/MaterialDesignTheme" >
         </activity>
     </application>

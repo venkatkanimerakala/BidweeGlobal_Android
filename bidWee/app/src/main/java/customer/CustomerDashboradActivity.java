@@ -1,4 +1,4 @@
-package com.bidwee.activities;
+package customer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bidwee.activities.R;
 
 import misc.Utils;
 
@@ -153,7 +155,9 @@ public class CustomerDashboradActivity extends AppCompatActivity implements View
                 break;
 
             case R.id.tool_profileImageView:
-                Toast.makeText(CustomerDashboradActivity.this, "Profile will be there some day", Toast.LENGTH_SHORT).show();
+                Intent profileIntent = new Intent(CustomerDashboradActivity.this, MyProfileActivity.class);
+                startActivity(profileIntent);
+                finish();
                 break;
 
             case R.id.tool_creditsImageView:
@@ -161,11 +165,12 @@ public class CustomerDashboradActivity extends AppCompatActivity implements View
                 break;
 
             case R.id.tool_rfbImageView:
-                Toast.makeText(CustomerDashboradActivity.this, "RFB will be there some day", Toast.LENGTH_SHORT).show();
+                Intent rfbIntent = new Intent(CustomerDashboradActivity.this, RFBActivity.class);
+                startActivity(rfbIntent);
                 break;
 
             case R.id.tool_notificationImageView:
-                Intent notificationIntent = new Intent(CustomerDashboradActivity.this, NotificationActivity.class);
+                Intent notificationIntent = new Intent(CustomerDashboradActivity.this, NotificationsActivity.class);
                 startActivity(notificationIntent);
                 break;
 

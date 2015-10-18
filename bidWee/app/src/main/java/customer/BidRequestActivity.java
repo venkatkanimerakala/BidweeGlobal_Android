@@ -1,8 +1,8 @@
-package com.bidwee.activities;
+package customer;
 
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.BaseAdapter;
@@ -10,22 +10,31 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.bidwee.activities.R;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import adapters.RecomendationAdapters;
+import customer.fragments.SendingBidReqestDailogFragment;
 import models.RecommendationModel;
 
 public class BidRequestActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView backImageView, notificationImageView;
 
-    private ImageView requestSendingImageview;
-    private AnimationDrawable requestSendingtAnimation;
-
     private TextView noOfOuteletsTextview;
     private ListView recomendationListView;
     private BaseAdapter recomendationAdapter;
+
+    private int timerCountInMillis = 5000;
+    private Timer timer;
+    private Handler timerTaskHandler;
+    private TimerTask timerTask;
+
+    private SendingBidReqestDailogFragment sendingBidReqestDailogFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +54,6 @@ public class BidRequestActivity extends AppCompatActivity implements View.OnClic
         backImageView.setOnClickListener(this);
         notificationImageView.setOnClickListener(this);
 
-        requestSendingImageview = (ImageView)findViewById(R.id.bidreq_requestSendingImageView);
-        requestSendingImageview.setBackgroundResource(R.drawable.bid_submit_anim);
-
-        requestSendingtAnimation = (AnimationDrawable) requestSendingImageview.getBackground();
-        requestSendingtAnimation.start();
-
         noOfOuteletsTextview = (TextView)findViewById(R.id.bidreq_noOfOutletsTextview);
 
         recomendationListView = (ListView)findViewById(R.id.bidreq_recomendationListview);
@@ -58,6 +61,39 @@ public class BidRequestActivity extends AppCompatActivity implements View.OnClic
         recomendationAdapter = new RecomendationAdapters(this, getRecomendationList());
 
         recomendationListView.setAdapter(recomendationAdapter);
+
+        showSendingBidRequestDailog();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    private void showSendingBidRequestDailog() {
+
+        sendingBidReqestDailogFragment = new SendingBidReqestDailogFragment();
+        // Show Alert DialogFragment
+        sendingBidReqestDailogFragment.show(getSupportFragmentManager(), "Sending Bid Request Dialog Fragment");
+        sendingBidReqestDailogFragment.setCancelable(false);
+
+        timer = new Timer();
+        timerTaskHandler = new Handler();
+
+        timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                timerTaskHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        timerTask.cancel();
+                        sendingBidReqestDailogFragment.dismiss();
+                    }
+                });
+            }
+        };
+
+        timer.schedule(timerTask, timerCountInMillis, timerCountInMillis);
     }
 
     private List<RecommendationModel> getRecomendationList(){
@@ -80,7 +116,7 @@ public class BidRequestActivity extends AppCompatActivity implements View.OnClic
 
 
             case R.id.tool_notificationImageView:
-                Intent notificationIntent = new Intent(BidRequestActivity.this, NotificationActivity.class);
+                Intent notificationIntent = new Intent(BidRequestActivity.this, NotificationsActivity.class);
                 startActivity(notificationIntent);
                 finish();
                 break;

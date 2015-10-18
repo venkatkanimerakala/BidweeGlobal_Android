@@ -1,4 +1,4 @@
-package com.bidwee.activities;
+package customer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
+
+import com.bidwee.activities.R;
 
 public class ProductDetailsActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -96,7 +98,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements View.On
                 break;
 
             case R.id.tool_notificationImageView:
-                Intent notificationIntent = new Intent(ProductDetailsActivity.this, NotificationActivity.class);
+                Intent notificationIntent = new Intent(ProductDetailsActivity.this, NotificationsActivity.class);
                 startActivity(notificationIntent);
                 break;
 

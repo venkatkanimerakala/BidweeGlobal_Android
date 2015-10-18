@@ -35,12 +35,16 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white_color"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
                 <ImageView
                     android:id="@+id/bidreq_requestSendingImageView"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img_shops"
+                    android:padding="5dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -48,7 +52,8 @@
                     android:gravity="center"
                     android:text="Your bid request reached"
                     android:textColor="@color/black_color"
-                    android:textSize="10sp" />
+                    android:textSize="12sp"
+                    android:paddingTop="5dp"/>
 
                 <TextView
                     android:id="@+id/bidreq_noOfOutletsTextview"
@@ -57,7 +62,7 @@
                     android:gravity="center"
                     android:text="4,500 outlets in Hyderabad"
                     android:textColor="@color/black_color"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
